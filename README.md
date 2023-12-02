@@ -1,7 +1,9 @@
 # Ecodo
 ## Bangkit 2023 batch 2  Product Capstone
 welcome to Ecodo
+
 ![Logo Ecodo](github_asset/logo_logo_primer.png)
+
 <p>
 Ecodo is a user-friendly application aimed at simplifying waste management, promoting recycling, and engaging the community in proactive efforts to maintain a clean and sustainable environment. We are aware of the urgency in addressing waste management issues, and with Ecodo, we hope to empower individuals, local governments, and environmentalists with a powerful and easy-to-use platform to achieve real waste reduction and environmental preservation.</p>
 

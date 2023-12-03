@@ -1,0 +1,38 @@
+<annotation>
+	<folder>resize</folder>
+	<filename>multiple_object (221).jpg</filename>
+	<path>D:\ECODO\resize\multiple_object (221).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>300</width>
+		<height>300</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>glass</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>87</xmin>
+			<ymin>78</ymin>
+			<xmax>135</xmax>
+			<ymax>238</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>glass</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>154</xmin>
+			<ymin>31</ymin>
+			<xmax>187</xmax>
+			<ymax>202</ymax>
+		</bndbox>
+	</object>
+</annotation>

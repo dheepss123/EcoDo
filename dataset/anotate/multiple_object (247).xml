@@ -1,0 +1,38 @@
+<annotation>
+	<folder>resize</folder>
+	<filename>multiple_object (247).jpg</filename>
+	<path>D:\ECODO\resize\multiple_object (247).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>300</width>
+		<height>300</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>cardboard</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>229</xmin>
+			<ymin>169</ymin>
+			<xmax>276</xmax>
+			<ymax>225</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>plastic bottle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>11</xmin>
+			<ymin>139</ymin>
+			<xmax>52</xmax>
+			<ymax>262</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,38 @@
+<annotation>
+	<folder>resize</folder>
+	<filename>multiple_object (1).jpg</filename>
+	<path>D:\ECODO\resize\multiple_object (1).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>300</width>
+		<height>300</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>metal</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>83</xmin>
+			<ymin>112</ymin>
+			<xmax>147</xmax>
+			<ymax>190</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>metal</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>170</xmin>
+			<ymin>125</ymin>
+			<xmax>218</xmax>
+			<ymax>191</ymax>
+		</bndbox>
+	</object>
+</annotation>

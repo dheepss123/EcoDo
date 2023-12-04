@@ -22,15 +22,15 @@ def xml_to_csv(input_path, output_path):
     column_name = ['filename', 'width', 'height', 'class', 'xmin', 'ymin', 'xmax', 'ymax']
     xml_df = pd.DataFrame(xml_list, columns=column_name)
 
-    # Membuat direktori output jika belum ada
+
     os.makedirs(output_path, exist_ok=True)
 
     xml_df.to_csv(os.path.join(output_path, 'label.csv'), index=None)
     print(f'Successfully converted xml to csv. Saved at {output_path}')
 
 def main():
-    input_path = r'C:\EcoDo\dataset\anotate'
-    output_path = r'C:\EcoDo\dataset\resize'
+    input_path = r'C:\Users\User\Desktop\EcoDo\dataset\fix\test'
+    output_path = r'C:\Users\User\Desktop\EcoDo\dataset\fix\test'
     xml_to_csv(input_path, output_path)
 
 if __name__ == "__main__":

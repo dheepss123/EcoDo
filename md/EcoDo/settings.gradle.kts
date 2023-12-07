@@ -15,4 +15,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "EcoDo"
 include(":app")
- 

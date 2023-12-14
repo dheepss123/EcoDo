@@ -1,0 +1,3 @@
+tes
+name_class = ['cardboard', 'glass', 'metal', 'organic', 'paper', 'plastic']
+Number of classes:  {'cardboard': 0, 'glass': 1, 'metal': 2, 'organic': 3, 'paper': 4, 'plastic': 5}

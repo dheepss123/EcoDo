@@ -1,6 +1,6 @@
 # Ecodo
 ## Bangkit 2023 batch 2  Product Capstone
-welcome to Ecodo
+<h3>welcome to Ecodo</h3>
 
 ![Logo Ecodo](github_asset/logo_logo_primer.png)
 

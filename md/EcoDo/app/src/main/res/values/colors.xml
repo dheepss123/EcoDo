@@ -8,5 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#FF136D33</color>
+    <color name="glade_green">#618264</color>
+    <color name="dusty_green">#79AC78</color>
+    <color name="sprout">#B0D9B1</color>
+    <color name="surf_crest">#D0E7D2</color>
     <color name="filter_color">#F3F4EE</color>
 </resources>

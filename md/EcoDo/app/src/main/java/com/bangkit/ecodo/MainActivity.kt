@@ -1,5 +1,6 @@
 package com.bangkit.ecodo
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +9,8 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.bangkit.ecodo.databinding.ActivityMainBinding
+import com.bangkit.ecodo.ui.recomendation.RecomendationActivity
+import com.bangkit.ecodo.ui.tutorial.TutorialActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,9 +18,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+//        binding.button1.setOnClickListener {
+//            val intent = Intent(this, RecomendationActivity::class.java)
+//            startActivity(intent)
+//        }
+//
+//        binding.buton2.setOnClickListener {
+//            val intent = Intent(this, TutorialActivity::class.java)
+//            startActivity(intent)
+//        }
 
         val navView: BottomNavigationView = binding.navView
 

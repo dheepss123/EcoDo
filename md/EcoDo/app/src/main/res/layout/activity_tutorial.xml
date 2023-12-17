@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.tutorial.TutorialActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/search_tutorial">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:title="@string/headline" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_tutorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="14dp"
+        android:hint="@string/hint_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_filter"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar" />
+
+    <TextView
+        android:id="@+id/tv_filter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_filter_s"
+        android:layout_marginStart="20dp"
+        android:lineSpacingExtra="4sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linear_layout1"
+        app:layout_constraintTop_toBottomOf="@+id/search_tutorial"/>
+
+    <LinearLayout
+        android:id="@+id/linear_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_filter">
+
+        <com.bangkit.ecodo.ui.customview.CustomButtonFilterOn
+            android:id="@+id/filter_1"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="22dp"
+            android:background="@drawable/filter_button_on"
+            android:gravity="center"
+            android:text="@string/filter_1_s"
+            android:textSize="12sp" />
+
+        <com.bangkit.ecodo.ui.customview.CustomButtonFilterOff
+            android:id="@+id/filter_2"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="22dp"
+            android:gravity="center"
+            tools:textColor="@color/green"
+            android:background="@drawable/filter_button_off"
+            android:text="@string/filter_2_s"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="14dp"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout1">
+
+        <com.bangkit.ecodo.ui.customview.CustomButtonFilterOff
+            android:id="@+id/filter_3"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="22dp"
+            android:background="@drawable/filter_button_off"
+            android:gravity="center"
+            android:text="@string/filter_1_s"
+            android:textSize="12sp" />
+
+        <com.bangkit.ecodo.ui.customview.CustomButtonFilterOff
+            android:id="@+id/filter_4"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="22dp"
+            android:gravity="center"
+            tools:textColor="@color/green"
+            android:background="@drawable/filter_button_off"
+            android:text="@string/filter_2_s"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:overScrollMode="never"
+        android:scrollbarSize="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout2" >
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

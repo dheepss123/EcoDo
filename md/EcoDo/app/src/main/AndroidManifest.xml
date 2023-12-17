@@ -13,9 +13,20 @@
         android:theme="@style/Theme.EcoDo"
         tools:targetApi="31">
         <activity
+            android:name=".ui.recomendation.video.VideoRecomendationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.recomendation.information.InformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.recomendation.RecomendationActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ui.tutorial.TutorialActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

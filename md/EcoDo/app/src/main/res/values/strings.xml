@@ -3,4 +3,48 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="headline">Tutorial</string>
+    <string name="filter_1_s">Barang guna</string>
+    <string name="tv_filter_s">Atau cari berdasarkan filter</string>
+    <string name="filter_2_s">Bisnis</string>
+    <string name="tv_title_video">Ini adalah judul video</string>
+    <string name="hint_search">Cari tutorial yang anda inginkan</string>
+
+    <string name="headline_video_recomend">Tutorial Rekomendasi</string>
+    <string name="headline_information">Rekomendasi Daur Ulang</string>
+    <string name="tv_information_s">Berikut hal yang dapat anda lakukan dalam melakukan (Reuse)</string>
+    <string name="information_1">\n Hindari penggunaan alat makan sekali pakai. Sebaliknya, pakailah peralatan makan dan botol yang dapat digunakan berulang kali.</string>
+    <string name="information_2">\n\nPilih barang dengan bungkus kemasan yang sedikit atau tidak berlebihan.</string>
+    <string name="information_3">\n\nGunakan kedua sisi lembar kertas.</string>
+    <string name="information_4">\n\nMembawa kantong belanja sendiri.</string>
+    <string name="information_5">\n\nBelilah barang yang dapat diisi ulang.</string>
+    <string name="information_6">\n\nKurangi penggunaan kertas tisu dengan menggunakan lap kain atau sapu tangan.</string>
+    <string name="tv_feedback_s">Berikan pendapat anda terhadap informasi yang diberikan</string>
+    <string name="title_recomendation">Rekomendasi Daur Ulang</string>
+    <string name="title_jenis">Jenis Sampah</string>
+    <string name="jenis">Plastik</string>
+    <string name="head">Yuk cari tau apa yang bisa kamu \nlakukan dengan jenis sampah (plastik)</string>
+    <string name="btn_cek_video">Cek Video</string>
+    <string name="btn_cek_desc">Yuk Belajar menjadi keren</string>
+    <string name="reduce_desc">deskripsi</string>
+    <string name="head_reduce">Title</string>
+
+    <integer-array name="data_img">
+        <item>@drawable/reduces</item>
+        <item>@drawable/reuse</item>
+        <item>@drawable/recycles</item>
+    </integer-array>
+
+    <string-array name="data_head">
+        <item>Reduce</item>
+        <item>Reuse</item>
+        <item>Recycle</item>
+    </string-array>
+
+    <string-array name="data_desc">
+        <item>Mengurangi produksi limbah dengan mengurangi penggunaan barang-barang sekali pakai atau mengambil langkah-langkah untuk mengurangi konsumsi sumber daya alam</item>
+        <item>Ini mencakup penggunaan kembali secara konvensional di mana barang dipakai lagi dengan fungsi yang sama, dan penggunaan kembali di mana barang dipergunakan dengan fungsi yang berbeda</item>
+        <item>proses untuk menjadikan suatu bahan bekas menjadi bahan baru dengan tujuan mencegah adanya sampah yang sebenarnya dapat menjadi sesuatu yang berguna, mengurangi penggunaan bahan baku</item>
+    </string-array>
 </resources>

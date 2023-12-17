@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="4dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="227dp"
+            android:layout_height="290dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/reduce_img"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/header_card_bg"
+                android:src="@drawable/reduces" />
+
+            <TextView
+                android:id="@+id/tv_reduce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="top"
+                android:lineSpacingExtra="5sp"
+                android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="@string/head_reduce" />
+
+            <TextView
+                android:id="@+id/reduce_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="top"
+                android:lineSpacingExtra="6sp"
+                android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                android:textSize="12sp"
+                tools:text="@string/reduce_desc" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/reduce_desc">
+
+                <com.bangkit.ecodo.ui.customview.CustomButtonCard
+                    android:id="@+id/btn_video"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/btn_cek_video" />
+
+                <com.bangkit.ecodo.ui.customview.CustomButtonCard2
+                    android:id="@+id/btn_cek_desc"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/btn_cek_desc" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

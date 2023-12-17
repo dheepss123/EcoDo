@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/green" /> <!-- Set the pressed color -->
+            <corners android:radius="100dp" /> <!-- Set the corner radius -->
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#FFF3F4EE" /> <!-- Set the default color -->
+            <corners android:radius="100dp" /> <!-- Set the corner radius -->
+        </shape>
+    </item>
+</selector>

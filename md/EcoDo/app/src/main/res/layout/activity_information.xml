@@ -126,7 +126,7 @@
             android:layout_width="match_parent"
             android:layout_height="72dp"
             android:orientation="horizontal"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:paddingStart="15dp"
@@ -157,8 +157,8 @@
 
             <com.bangkit.ecodo.ui.customview.DislikeButton
                 android:id="@+id/imageButtonDislike"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="18dp"
                 android:background="@drawable/img_btn_dislike"
@@ -169,8 +169,8 @@
 
             <com.bangkit.ecodo.ui.customview.LikeButton
                 android:id="@+id/imageButtonLike"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="11dp"
                 android:background="@drawable/img_btn"
@@ -204,7 +204,7 @@
             android:layout_height="64dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintGuide_percent="0.88"
+            app:layout_constraintGuide_percent="1"
             app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

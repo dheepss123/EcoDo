@@ -6,8 +6,8 @@ import android.widget.ImageView
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class RecomendationModel (
+data class RecomendationModel(
     var imgItem: Int,
     var title: String,
     var desc: String,
-): Parcelable
+) : Parcelable

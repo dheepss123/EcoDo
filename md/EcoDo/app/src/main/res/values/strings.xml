@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">EcoDo</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_trash">Sampah</string>
+    <string name="title_settings">Pengaturan</string>
 
     <string name="headline">Tutorial</string>
     <string name="filter_1_s">Barang guna</string>

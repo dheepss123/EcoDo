@@ -8,5 +8,3 @@ data class VideoModel(
     var photo: Int,
     var title: String,
 ) : Parcelable
-
-

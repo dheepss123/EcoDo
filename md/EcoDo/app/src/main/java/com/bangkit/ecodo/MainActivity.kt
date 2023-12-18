@@ -21,16 +21,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        binding.button1.setOnClickListener {
-//            val intent = Intent(this, RecomendationActivity::class.java)
-//            startActivity(intent)
-//        }
-//
-//        binding.buton2.setOnClickListener {
-//            val intent = Intent(this, TutorialActivity::class.java)
-//            startActivity(intent)
-//        }
-
         val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
@@ -41,7 +31,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+//        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
 }

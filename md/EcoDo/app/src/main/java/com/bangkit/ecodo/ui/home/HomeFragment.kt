@@ -41,7 +41,7 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
-        binding.buton2.setOnClickListener {
+        binding.menu2.setOnClickListener {
             val intent = Intent(context, TutorialActivity::class.java)
             startActivity(intent)
         }

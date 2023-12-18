@@ -1,4 +1,4 @@
-package com.bangkit.ecodo.ui.notifications
+package com.bangkit.ecodo.ui.trash
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.bangkit.ecodo.databinding.FragmentNotificationsBinding
+import com.bangkit.ecodo.databinding.FragmentTrashBinding
 
-class NotificationsFragment : Fragment() {
+class TrashFragment : Fragment() {
 
-    private var _binding: FragmentNotificationsBinding? = null
+    private var _binding: FragmentTrashBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        val trashViewModel =
+            ViewModelProvider(this).get(TrashViewModel::class.java)
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentTrashBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textDashboard
+        trashViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

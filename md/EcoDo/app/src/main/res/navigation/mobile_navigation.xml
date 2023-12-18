@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.bangkit.ecodo.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_trash"
+        android:name="com.bangkit.ecodo.ui.trash.TrashFragment"
         android:label="@string/title_trash"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_trash" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.bangkit.ecodo.ui.notifications.NotificationsFragment"
+        android:id="@+id/navigation_settings"
+        android:name="com.bangkit.ecodo.ui.settings.SettingsFragment"
         android:label="@string/title_settings"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_settings" />
 </navigation>

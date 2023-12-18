@@ -19,7 +19,7 @@
 
         <LinearLayout
             android:layout_width="227dp"
-            android:layout_height="290dp"
+            android:layout_height="340dp"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +28,7 @@
             <ImageView
                 android:id="@+id/reduce_img"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="100dp"
                 android:background="@drawable/header_card_bg"
                 android:src="@drawable/reduces" />
 

@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">EcoDo</string>
+    <string name="app_name_regular">ecodo</string>
     <string name="title_home">Beranda</string>
     <string name="title_trash">Sampah</string>
     <string name="title_settings">Pengaturan</string>
+    <string name="pindai_sampah">Pindai Sampah</string>
+    <string name="tutorial_daur_ulang">Tutorial Daur Ulang</string>
+    <string name="cari_bank_sampah">Cari Bank Sampah</string>
+    <string name="histori_sampah">Histori Sampah</string>
 
     <string name="headline">Tutorial</string>
     <string name="filter_1_s">Barang guna</string>

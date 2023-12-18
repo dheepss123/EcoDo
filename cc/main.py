@@ -8,12 +8,7 @@ import io
 import os
 
 app = FastAPI()
-db_settings = {
-    "host": "",
-    "user": "root",
-    "password": "akukamu",
-    "database": "ecodo",
-}
+
 model_path = os.path.join(os.path.dirname(__file__), 'SavedModel')
 model = tf.saved_model.load(model_path)
 

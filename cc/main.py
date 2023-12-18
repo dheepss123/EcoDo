@@ -42,9 +42,6 @@ async def make_predictions(file: UploadFile = File(...)):
             "data": {
                 "predicted_class": predicted_class,
                 "confidence": float(confidence),
-                "description": description,
-                "image_url": image_url,
-                "video_url": video_url,
             }
         }
         return response_data

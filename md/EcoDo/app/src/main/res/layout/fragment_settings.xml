@@ -1,22 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.settings.SettingsFragment">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_notifications"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:orientation="horizontal">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="1"
+            android:columnCount="1"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginStart="88dp"
+                android:layout_marginEnd="92dp"
+                android:layout_marginTop="38dp"
+                android:layout_marginBottom="38dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    card_view:layout_constraintBottom_toBottomOf="parent"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/icon_ecodo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/ecodoicon"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:padding="17dp">
+
+                    <ImageView
+                        android:id="@+id/icon_ask"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="15dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/iconbantuan"
+                        card_view:layout_constraintBottom_toBottomOf="parent"
+                        card_view:layout_constraintEnd_toStartOf="@+id/text_setting"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent"/>
+                    <TextView
+                        android:id="@+id/tv_ask"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        card_view:layout_constraintBottom_toBottomOf="@+id/icon_ask"
+                        card_view:layout_constraintStart_toEndOf="@+id/icon_ask"
+                        card_view:layout_constraintTop_toTopOf="@+id/icon_ask"
+                        tools:text="@string/bantuan"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:padding="17dp">
+
+                    <ImageView
+                        android:id="@+id/icon_language"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="15dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/iconbahasa"
+                        card_view:layout_constraintBottom_toBottomOf="parent"
+                        card_view:layout_constraintEnd_toStartOf="@+id/about"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent"/>
+                    <TextView
+                        android:id="@+id/tv_language"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingTop="3dp"
+                        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        card_view:layout_constraintBottom_toBottomOf="@+id/icon_language"
+                        card_view:layout_constraintEnd_toStartOf="parent"
+                        card_view:layout_constraintStart_toEndOf="@+id/icon_language"
+                        card_view:layout_constraintTop_toTopOf="@+id/icon_language"
+                        tools:text="@string/pilihanbahasa"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:padding="17dp">
+
+                    <ImageView
+                        android:id="@+id/icon_rate"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="15dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/iconbahasa"
+                        card_view:layout_constraintBottom_toBottomOf="parent"
+                        card_view:layout_constraintEnd_toStartOf="@+id/about"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent"/>
+                    <TextView
+                        android:id="@+id/tv_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingTop="3dp"
+                        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        card_view:layout_constraintBottom_toBottomOf="@+id/icon_rate"
+                        card_view:layout_constraintEnd_toStartOf="parent"
+                        card_view:layout_constraintStart_toEndOf="@+id/icon_rate"
+                        card_view:layout_constraintTop_toTopOf="@+id/icon_rate"
+                        tools:text="@string/pilihanbahasa"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:padding="17dp">
+
+                    <ImageView
+                        android:id="@+id/icon_about"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="15dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icontentangkami"
+                        card_view:layout_constraintBottom_toBottomOf="parent"
+                        card_view:layout_constraintEnd_toStartOf="@+id/about"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent"/>
+                    <TextView
+                        android:id="@+id/tv_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingTop="3dp"
+                        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        card_view:layout_constraintBottom_toBottomOf="@+id/icon_about"
+                        card_view:layout_constraintEnd_toStartOf="parent"
+                        card_view:layout_constraintStart_toEndOf="@+id/icon_about"
+                        card_view:layout_constraintTop_toTopOf="@+id/icon_about"
+                        tools:text="@string/tentang"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

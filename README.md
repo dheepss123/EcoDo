@@ -21,6 +21,33 @@ Ecodo is a user-friendly application aimed at simplifying waste management, prom
 | Fauzan Rizkyana Gunawan  | A152BSY2093   | Mobile Development  | [GitHub Profile](https://github.com/fauzanrizkyanag)|
 | Bintang Abillah Safna    | A120BSY2224   | Mobile Development  | [GitHub Profile](https://github.com/BintangSafna)|
 
+# Project Documentation
+## Mobile Developtment (MD):
+<!DOCTYPE html>
+<html lang="id">
+<head>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <img src="github_asset/ss1.jpeg" alt="Screenshot 1">
+      </div>
+      <div class="col-md-3">
+        <img src="github_asset/ss2.jpeg" alt="Screenshot 2">
+      </div>
+      <div class="col-md-3">
+        <img src="github_asset/ss3.jpeg" alt="Screenshot 3">
+      </div>
+      <div class="col-md-3">
+        <img src="github_asset/ss4.jpeg" alt="Screenshot 4">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
 # Tech Stacks
 
 # How does this app work?

@@ -14,7 +14,6 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class TrashFragment : Fragment() {
-
     private var _binding: FragmentTrashBinding? = null
     private val viewModel: TrashViewModel by viewModels()
 

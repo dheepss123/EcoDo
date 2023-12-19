@@ -1,4 +1,4 @@
-package com.bangkit.ecodo.ui.recomendation.video
+package com.bangkit.ecodo.ui.recommendation.video
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,7 +13,7 @@ class VideoRecomendationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityVideoRecomendationBinding
     private lateinit var adapter: AdapterItemTutorial
 
-    private var  listCard = ArrayList<VideoModel>()
+    private var listCard = ArrayList<VideoModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,9 +21,14 @@ class VideoRecomendationActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val layoutManager = LinearLayoutManager(this@VideoRecomendationActivity, LinearLayoutManager.VERTICAL, false)
+        val layoutManager = LinearLayoutManager(
+            this@VideoRecomendationActivity,
+            LinearLayoutManager.VERTICAL,
+            false
+        )
         binding.rvList.layoutManager = layoutManager
-        val itemDecoration = DividerItemDecoration(this@VideoRecomendationActivity, layoutManager.orientation)
+        val itemDecoration =
+            DividerItemDecoration(this@VideoRecomendationActivity, layoutManager.orientation)
         binding.rvList.addItemDecoration(itemDecoration)
 
         listCard.addAll(listCards)

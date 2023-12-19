@@ -5,16 +5,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bangkit.ecodo.databinding.FragmentHomeBinding
-import com.bangkit.ecodo.ui.recomendation.RecomendationActivity
+import com.bangkit.ecodo.ui.recommendation.RecommendationActivity
+import com.bangkit.ecodo.ui.scan_trash.ScanTrashActivity
 import com.bangkit.ecodo.ui.tutorial.TutorialActivity
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
+    private lateinit var homeViewModel: HomeViewModel
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -23,21 +24,28 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        return binding.root
+    }
 
-//        val textView: TextView = binding.textHome
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        //        val textView: TextView = binding.textHome
 //        homeViewModel.text.observe(viewLifecycleOwner) {
 //            textView.text = it
 //        }
+        homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
 
         binding.button1.setOnClickListener {
-            val intent = Intent(context, RecomendationActivity::class.java)
+            val intent = Intent(context, RecommendationActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.menu1.setOnClickListener {
+            val intent = Intent(context, ScanTrashActivity::class.java)
             startActivity(intent)
         }
 
@@ -45,8 +53,6 @@ class HomeFragment : Fragment() {
             val intent = Intent(context, TutorialActivity::class.java)
             startActivity(intent)
         }
-
-        return root
     }
 
     override fun onDestroyView() {

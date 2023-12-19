@@ -10,11 +10,8 @@ import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.ecodo.R
-import com.bangkit.ecodo.data.model.RecomendationModel
 import com.bangkit.ecodo.data.model.VideoModel
-import com.bangkit.ecodo.databinding.ActivityRecomendationBinding
 import com.bangkit.ecodo.databinding.ActivityTutorialBinding
-import com.bangkit.ecodo.ui.adapter.AdapterCardRecomendation
 import com.bangkit.ecodo.ui.adapter.AdapterItemTutorial
 
 class TutorialActivity : AppCompatActivity() {

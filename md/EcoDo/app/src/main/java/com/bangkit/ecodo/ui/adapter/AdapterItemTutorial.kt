@@ -1,21 +1,13 @@
 package com.bangkit.ecodo.ui.adapter
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.ecodo.R
-import com.bangkit.ecodo.data.model.RecomendationModel
 import com.bangkit.ecodo.data.model.VideoModel
-import com.bangkit.ecodo.databinding.ItemTutorialBinding
-import com.bangkit.ecodo.ui.recomendation.information.InformationActivity
 
 class AdapterItemTutorial (private val listItem: ArrayList<VideoModel>) : RecyclerView.Adapter<AdapterItemTutorial.ListViewHolder>() {
 

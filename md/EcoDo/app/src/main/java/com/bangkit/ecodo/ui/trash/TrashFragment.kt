@@ -28,10 +28,6 @@ class TrashFragment : Fragment() {
         _binding = FragmentTrashBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        trashViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
     }
 

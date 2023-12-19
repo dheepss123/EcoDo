@@ -30,8 +30,10 @@ class TrashRepository(
             val response = apiService.predictTrash(multipartBody)
             val trashId = trashDao.insert(
                 Trash(
-                    predictedClass = response.predictedClass,
-                    imageData = imageFile.readBytes()
+                    predictedClass = response.predictedClass.data.nama,
+                    videoUrl = response.predictedClass.data.video,
+                    articleUrl = response.predictedClass.data.artikel,
+                    imageData = imageFile.readBytes(),
                 )
             )
             emit(Resource.Success(trashId))

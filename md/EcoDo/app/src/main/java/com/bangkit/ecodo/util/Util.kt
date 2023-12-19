@@ -5,9 +5,11 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Matrix
 import android.net.Uri
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.exifinterface.media.ExifInterface
+import com.bumptech.glide.Glide
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
@@ -18,7 +20,7 @@ import java.util.Locale
 
 private const val MAXIMAL_SIZE = 1000000
 
-fun ByteArray.toImageBitmap() = BitmapFactory.decodeByteArray(this, 0, this.size)
+fun ByteArray.toImageBitmap(): Bitmap? = BitmapFactory.decodeByteArray(this, 0, this.size)
 
 fun File.reduceFileImage(): File {
     val file = this
@@ -75,6 +77,12 @@ private val timeStamp: String = SimpleDateFormat(FILENAME_FORMAT, Locale.US).for
 fun createCustomTempFile(context: Context): File {
     val filesDir = context.externalCacheDir
     return File.createTempFile(timeStamp, ".jpg", filesDir)
+}
+
+fun ImageView.loadImage(context: Context, url: String) {
+    Glide.with(context)
+        .load(url)
+        .into(this)
 }
 
 fun AppCompatActivity.showToast(msg: String) {

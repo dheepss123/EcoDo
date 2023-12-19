@@ -6,19 +6,26 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageView
+import androidx.activity.viewModels
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.ecodo.R
 import com.bangkit.ecodo.data.model.VideoModel
+import com.bangkit.ecodo.data.retrofit.response.getThumbnail
 import com.bangkit.ecodo.databinding.ActivityTutorialBinding
 import com.bangkit.ecodo.ui.adapter.AdapterItemTutorial
+import com.bangkit.ecodo.util.Resource
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class TutorialActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTutorialBinding
     private lateinit var adapter: AdapterItemTutorial
 
-    private var  listCard = ArrayList<VideoModel>()
+    val viewModel: TutorialViewModel by viewModels()
+
+    private var listCard = ArrayList<VideoModel>()
 
     private val dataSumber = listOf("Data 1", "Data 2", "Data 3", "Data 4", "Data 5")
 
@@ -28,7 +35,8 @@ class TutorialActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val layoutManager = LinearLayoutManager(this@TutorialActivity, LinearLayoutManager.VERTICAL, false)
+        val layoutManager =
+            LinearLayoutManager(this@TutorialActivity, LinearLayoutManager.VERTICAL, false)
         binding.rvList.layoutManager = layoutManager
         val itemDecoration = DividerItemDecoration(this@TutorialActivity, layoutManager.orientation)
         binding.rvList.addItemDecoration(itemDecoration)
@@ -55,9 +63,21 @@ class TutorialActivity : AppCompatActivity() {
         val head = binding.tvFilter
         head.text = getString(R.string.tv_filter_s)
 
-        listCard.addAll(listCards)
-        adapter = AdapterItemTutorial(listCard)
-        binding.rvList.adapter = adapter
+
+        viewModel.getVideos().observe(this) {
+            when (it) {
+                is Resource.Error -> {}
+                Resource.Loading -> {}
+                is Resource.Success -> {
+                    adapter = AdapterItemTutorial(ArrayList(it.data))
+                    binding.rvList.adapter = adapter
+                }
+            }
+        }
+
+//        listCard.addAll(listCards)
+//        adapter = AdapterItemTutorial(listCard)
+//        binding.rvList.adapter = adapter
 
     }
 
@@ -92,8 +112,8 @@ class TutorialActivity : AppCompatActivity() {
             val dataPhoto = resources.obtainTypedArray(R.array.data_img)
             val listCard = ArrayList<VideoModel>()
             for (i in dataName.indices) {
-                val imgId = dataPhoto.getResourceId(i, 0)
-                val card = VideoModel(imgId, dataName[i])
+                val card =
+                    VideoModel(getThumbnail(""), dataName[i])
                 listCard.add(card)
             }
             dataPhoto.recycle()

@@ -60,8 +60,6 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
 
-    implementation("com.github.bumptech.glide:glide:4.16.0")
-
     // Dagger - Hilt
     implementation("com.google.dagger:hilt-android:2.48")
     kapt("com.google.dagger:hilt-android-compiler:2.48")
@@ -85,6 +83,8 @@ dependencies {
     implementation("androidx.camera:camera-view:1.3.1")
 
     implementation("androidx.exifinterface:exifinterface:1.3.7")
+
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 }
 
 

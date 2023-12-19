@@ -8,11 +8,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.ecodo.R
 import com.bangkit.ecodo.data.model.VideoModel
+import com.bangkit.ecodo.util.loadImage
 
-class AdapterItemTutorial (private val listItem: ArrayList<VideoModel>) : RecyclerView.Adapter<AdapterItemTutorial.ListViewHolder>() {
+class AdapterItemTutorial(private val listItem: ArrayList<VideoModel>) :
+    RecyclerView.Adapter<AdapterItemTutorial.ListViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_tutorial, parent, false)
+        val view: View =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_tutorial, parent, false)
         return ListViewHolder(view)
     }
 
@@ -28,7 +31,7 @@ class AdapterItemTutorial (private val listItem: ArrayList<VideoModel>) : Recycl
         private var tvName: TextView = itemView.findViewById(R.id.tvItem)
 
         fun bind(card: VideoModel) {
-            imgPhoto.setImageResource(card.photo)
+            imgPhoto.loadImage(itemView.context, card.photo)
             tvName.text = card.title
         }
     }

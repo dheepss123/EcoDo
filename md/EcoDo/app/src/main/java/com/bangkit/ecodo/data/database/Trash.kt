@@ -13,6 +13,12 @@ data class Trash(
     @ColumnInfo(name = "predictedClass")
     val predictedClass: String,
 
+    @ColumnInfo(name = "article")
+    val articleUrl: String,
+
+    @ColumnInfo(name = "video")
+    val videoUrl: String,
+
     @ColumnInfo(typeAffinity = ColumnInfo.BLOB)
     val imageData: ByteArray,
 ) {

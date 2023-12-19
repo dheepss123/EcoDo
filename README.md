@@ -22,30 +22,36 @@ Ecodo is a user-friendly application aimed at simplifying waste management, prom
 | Bintang Abillah Safna    | A120BSY2224   | Mobile Development  | [GitHub Profile](https://github.com/BintangSafna)|
 
 # Project Documentation
-## Mobile Developtment (MD):
 <!DOCTYPE html>
 <html lang="id">
 <head>
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3">
-        <img src="github_asset/ss1.jpeg" alt="Screenshot 1" width="200" height="200">
-      </div>
-      <div class="col-md-3">
-        <img src="github_asset/ss2.jpeg" alt="Screenshot 2" width="200" height="200">
-      </div>
-      <div class="col-md-3">
-        <img src="github_asset/ss3.jpeg" alt="Screenshot 3" width="200" height="200">
-      </div>
-      <div class="col-md-3">
-        <img src="github_asset/ss4.jpeg" alt="Screenshot 4" width="200" height="200">
-      </div>
-    </div>
+  <div style="display: flex; justify-content: space-between;">
+<h3>Mobile Development (MD) : </h3>
+<h5>Screen Shoot APP</h5>
+  <img src="github_asset/ss1.jpeg" alt="Screenshot 1" width="160" height="320">
+  <img src="github_asset/ss2.jpeg" alt="Screenshot 2" width="160" height="320">
+  <img src="github_asset/ss3.jpeg" alt="Screenshot 3" width="160" height="320">
+  <img src="github_asset/ss4.jpeg" alt="Screenshot 4" width="160" height="320">
+  <img src="github_asset/ss5.jpeg" alt="Screenshot 4" width="160" height="320">
+  </div>
+  <div style="display: flex; justify-content: space-between;">
+  <h3> Cloud computing (CC) : </h3>
+  <h5> cloud computing architecture design</h5>
+  <img src="github_asset/cc_arcitechtur.png" alt="cc" width="482" height="155">
+  </div>
+  <div style="display: flex; justify-content: space-between;">
+  <h3> Machine Learning (ML) : </h3>
+  <h5> Machine Learning Model and Training History</h5>
+  <img src="github_asset/model_perform.png" alt="cc" width="595" height="295">
   </div>
 </body>
 </html>
+<br>
+
+### Cloud Computing (CC) : 
+##### 
 
 
 # Tech Stacks

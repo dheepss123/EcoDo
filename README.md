@@ -31,16 +31,16 @@ Ecodo is a user-friendly application aimed at simplifying waste management, prom
   <div class="container">
     <div class="row">
       <div class="col-md-3">
-        <img src="github_asset/ss1.jpeg" alt="Screenshot 1">
+        <img src="github_asset/ss1.jpeg" alt="Screenshot 1" width="200" height="200">
       </div>
       <div class="col-md-3">
-        <img src="github_asset/ss2.jpeg" alt="Screenshot 2">
+        <img src="github_asset/ss2.jpeg" alt="Screenshot 2" width="200" height="200">
       </div>
       <div class="col-md-3">
-        <img src="github_asset/ss3.jpeg" alt="Screenshot 3">
+        <img src="github_asset/ss3.jpeg" alt="Screenshot 3" width="200" height="200">
       </div>
       <div class="col-md-3">
-        <img src="github_asset/ss4.jpeg" alt="Screenshot 4">
+        <img src="github_asset/ss4.jpeg" alt="Screenshot 4" width="200" height="200">
       </div>
     </div>
   </div>

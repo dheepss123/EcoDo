@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.recomendation.RecomendationActivity">
+    tools:context=".ui.recommendation.RecommendationActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,6 +20,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
+
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/topAppBar"
                 android:layout_width="match_parent"
@@ -79,7 +80,7 @@
                             android:textAppearance="?android:attr/textAppearanceListItemSmall"
                             android:textSize="14sp"
                             android:textStyle="bold"
-                            tools:text="@string/title_jenis" />
+                            android:text="@string/title_jenis" />
 
                         <TextView
                             android:id="@+id/tv_jenis"
@@ -126,7 +127,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:gravity="center_vertical"
-                tools:text="@string/head" />
+                android:text="@string/head" />
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView

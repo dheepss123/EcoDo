@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,7 +9,7 @@
     android:layout_marginStart="8dp"
     android:layout_marginEnd="8dp"
     android:layout_marginBottom="4dp"
-    tools:context=".ui.recomendation.information.InformationActivity">
+    tools:context=".ui.recommendation.information.InformationActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -25,7 +24,7 @@
             card_view:layout_constraintStart_toEndOf="@id/tv_information"
             card_view:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ecodoicon"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal2"/>
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal2" />
 
         <TextView
             android:id="@+id/tv_information"
@@ -45,7 +44,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal2"
             android:alpha="0"
-            tools:alpha="100"/>
+            tools:alpha="100" />
 
         <LinearLayout
             android:id="@+id/linear_layout1"
@@ -74,7 +73,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 android:textColor="@color/black"
                 android:alpha="0"
-                tools:alpha="100"/>
+                tools:alpha="100" />
+
             <TextView
                 android:id="@+id/information2"
                 android:layout_width="match_parent"
@@ -85,7 +85,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 android:textColor="@color/black"
                 android:alpha="0"
-                tools:alpha="100"/>
+                tools:alpha="100" />
+
             <TextView
                 android:id="@+id/information3"
                 android:layout_width="match_parent"
@@ -96,7 +97,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 android:textColor="@color/black"
                 android:alpha="0"
-                tools:alpha="100"/>
+                tools:alpha="100" />
+
             <TextView
                 android:id="@+id/information4"
                 android:layout_width="match_parent"
@@ -107,7 +109,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 android:textColor="@color/black"
                 android:alpha="0"
-                tools:alpha="100"/>
+                tools:alpha="100" />
+
             <TextView
                 android:id="@+id/information5"
                 android:layout_width="match_parent"
@@ -118,7 +121,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 android:textColor="@color/black"
                 android:alpha="0"
-                tools:alpha="100"/>
+                tools:alpha="100" />
         </LinearLayout>
 
         <LinearLayout
@@ -153,7 +156,7 @@
                 android:layout_gravity="top"
                 app:layout_constraintHorizontal_bias="0.0"
                 android:alpha="0"
-                tools:alpha="100"/>
+                tools:alpha="100" />
 
             <com.bangkit.ecodo.ui.customview.DislikeButton
                 android:id="@+id/imageButtonDislike"
@@ -165,7 +168,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 android:onClick="buttonClicked"
                 android:alpha="0"
-                tools:alpha="100"/>
+                tools:alpha="100" />
 
             <com.bangkit.ecodo.ui.customview.LikeButton
                 android:id="@+id/imageButtonLike"
@@ -177,7 +180,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 android:onClick="buttonClicked"
                 android:alpha="0"
-                tools:alpha="100"/>
+                tools:alpha="100" />
         </LinearLayout>
 
         <androidx.constraintlayout.widget.Guideline

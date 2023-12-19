@@ -1,4 +1,4 @@
-package com.bangkit.ecodo.ui.trash
+package com.bangkit.ecodo.ui.recommendation
 
 import androidx.lifecycle.ViewModel
 import com.bangkit.ecodo.data.repository.TrashRepository
@@ -6,9 +6,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class TrashViewModel @Inject constructor(
+class RecommendationViewModel @Inject constructor(
     private val trashRepository: TrashRepository,
 ) : ViewModel() {
 
-    fun getHistory() = trashRepository.getTrashHistory()
+    fun getTrashById(id: Long) = trashRepository.getTrash(id)
 }

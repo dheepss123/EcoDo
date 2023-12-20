@@ -7,10 +7,39 @@
     android:orientation="vertical"
     tools:context=".SplashScreenActivity">
 
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/ic_logo_no_background"
-        android:layout_centerInParent="true" />
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearWelcome"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        style="@style/groupStyleteal_900">
+
+        <ImageView
+            android:id="@+id/imageImageOne"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="135dp"
+            android:layout_marginEnd="76dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="229dp"
+            android:layout_width="205dp"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription"
+            android:src="@drawable/icon_ecodo"/>
+
+        <ImageView
+            android:gravity="start"
+            android:id="@+id/imageArrowdown"
+            android:layout_height="184dp"
+            android:layout_marginTop="182dp"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription"
+            android:src="@drawable/bg_splash"/>
+    </LinearLayout>
 
 </RelativeLayout>

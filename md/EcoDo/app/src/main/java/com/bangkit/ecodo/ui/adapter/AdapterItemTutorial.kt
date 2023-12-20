@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.ecodo.R
 import com.bangkit.ecodo.data.model.VideoModel
-import com.bangkit.ecodo.util.loadImage
+import com.bumptech.glide.Glide
 
 class AdapterItemTutorial(private val listItem: MutableList<VideoModel>) :
     RecyclerView.Adapter<AdapterItemTutorial.ListViewHolder>() {
@@ -37,8 +37,10 @@ class AdapterItemTutorial(private val listItem: MutableList<VideoModel>) :
         private var tvName: TextView = itemView.findViewById(R.id.tvItem)
 
         fun bind(card: VideoModel) {
-            imgPhoto.loadImage(itemView.context, card.photo)
             tvName.text = card.title
+            Glide.with(itemView.context)
+                .load(card.photo)
+                .into(imgPhoto)
         }
     }
 }

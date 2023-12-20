@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="groupStyleteal_900">
+        <item name="android:background">@drawable/rectangle_bg_teal_900</item>
+    </style>
+</resources>

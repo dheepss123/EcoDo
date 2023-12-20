@@ -12,6 +12,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import java.util.concurrent.Executors
 import javax.inject.Singleton
 
 @Module
@@ -37,7 +38,7 @@ class AppModule {
     @Provides
     @Singleton
     fun provideTrashRepository(apiService: ApiService, database: EcodoDatabase): TrashRepository {
-        return TrashRepository(database.trashDao(), apiService)
+        return TrashRepository(database.trashDao(), apiService, Executors.newSingleThreadExecutor())
     }
 
     @Provides

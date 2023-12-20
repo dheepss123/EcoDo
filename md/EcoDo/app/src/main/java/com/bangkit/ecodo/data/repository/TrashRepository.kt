@@ -11,10 +11,12 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
+import java.util.concurrent.ExecutorService
 
 class TrashRepository(
     private val trashDao: TrashDao,
     private val apiService: ApiService,
+    private val executor: ExecutorService
 ) {
 
     fun predictTrash(image: File): LiveData<Resource<Long>> = liveData {
@@ -45,4 +47,11 @@ class TrashRepository(
     fun getTrashHistory() = trashDao.getAll()
 
     fun getTrash(id: Long) = trashDao.getTrashById(id)
+
+    fun deleteTrash(trash: Trash) {
+        executor.execute {
+            trashDao.deleteTrash(trash)
+        }
+
+    }
 }

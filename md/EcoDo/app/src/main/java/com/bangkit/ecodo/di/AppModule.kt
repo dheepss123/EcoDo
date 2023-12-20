@@ -3,6 +3,7 @@ package com.bangkit.ecodo.di
 import android.app.Application
 import androidx.room.Room
 import com.bangkit.ecodo.data.database.EcodoDatabase
+import com.bangkit.ecodo.data.repository.ArticleRepository
 import com.bangkit.ecodo.data.repository.TrashRepository
 import com.bangkit.ecodo.data.repository.VideoRepository
 import com.bangkit.ecodo.data.retrofit.ApiService
@@ -43,6 +44,12 @@ class AppModule {
     @Singleton
     fun provideVideoRepository(apiService: ApiService): VideoRepository {
         return VideoRepository(apiService)
+    }
+
+    @Provides
+    @Singleton
+    fun provideArticleRepository(apiService: ApiService): ArticleRepository {
+        return ArticleRepository()
     }
 
 }

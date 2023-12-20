@@ -15,6 +15,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
         <ImageView
             android:id="@+id/icon_ecodo"
             android:layout_width="150dp"
@@ -63,65 +75,22 @@
             android:alpha="0"
             tools:alpha="100">
 
-            <TextView
-                android:id="@+id/information1"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:gravity="top|start"
-                android:text="@string/information_1"
-                app:layout_constraintHorizontal_bias="0.0"
-                android:textColor="@color/black"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:overScrollMode="never"
+                android:scrollbarSize="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 android:alpha="0"
-                tools:alpha="100" />
+                tools:alpha="100">
+            </androidx.recyclerview.widget.RecyclerView>
 
-            <TextView
-                android:id="@+id/information2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="top|start"
-                android:textSize="15sp"
-                android:text="@string/information_2"
-                app:layout_constraintHorizontal_bias="0.0"
-                android:textColor="@color/black"
-                android:alpha="0"
-                tools:alpha="100" />
-
-            <TextView
-                android:id="@+id/information3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="top|start"
-                android:textSize="15sp"
-                android:text="@string/information_3"
-                app:layout_constraintHorizontal_bias="0.0"
-                android:textColor="@color/black"
-                android:alpha="0"
-                tools:alpha="100" />
-
-            <TextView
-                android:id="@+id/information4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="top|start"
-                android:textSize="16sp"
-                android:text="@string/information_4"
-                app:layout_constraintHorizontal_bias="0.0"
-                android:textColor="@color/black"
-                android:alpha="0"
-                tools:alpha="100" />
-
-            <TextView
-                android:id="@+id/information5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="top|start"
-                android:textSize="15sp"
-                android:text="@string/information_5"
-                app:layout_constraintHorizontal_bias="0.0"
-                android:textColor="@color/black"
-                android:alpha="0"
-                tools:alpha="100" />
         </LinearLayout>
 
         <LinearLayout

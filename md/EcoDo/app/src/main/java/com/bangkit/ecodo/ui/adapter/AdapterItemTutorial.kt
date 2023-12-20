@@ -10,8 +10,14 @@ import com.bangkit.ecodo.R
 import com.bangkit.ecodo.data.model.VideoModel
 import com.bangkit.ecodo.util.loadImage
 
-class AdapterItemTutorial(private val listItem: ArrayList<VideoModel>) :
+class AdapterItemTutorial(private val listItem: MutableList<VideoModel>) :
     RecyclerView.Adapter<AdapterItemTutorial.ListViewHolder>() {
+
+    fun updateList(newList: List<VideoModel>) {
+        listItem.clear()
+        listItem.addAll(newList)
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view: View =

@@ -99,6 +99,7 @@ Ecodo is a user-friendly application aimed at simplifying waste management, prom
 <br>
 
 # Tech Stacks
+<img src="github_asset/tech stack.png" alt="cc" width="1080">
 
 # How use this app?
 

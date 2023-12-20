@@ -16,18 +16,19 @@ class VideoRecomendationViewModel @Inject constructor(
     private val videorepository: VideoRepository,
 ) : ViewModel() {
 
-    private val _videoList = MutableLiveData<Resource<List<VideoModel>>>()
-    val videoList: LiveData<Resource<List<VideoModel>>> get() = _videoList
-
-    fun getVideos() {
-        viewModelScope.launch {
-            _videoList.value = Resource.Loading
-            try {
-                val response = videorepository.getVideos()
-                _videoList.value = response.value
-            } catch (e: Exception) {
-                _videoList.value = Resource.Error(e.localizedMessage?.toString() ?: "Unknown Error")
-            }
-        }
-    }
+//    private val _videoList = MutableLiveData<Resource<List<VideoModel>>>()
+//    val videoList: LiveData<Resource<List<VideoModel>>> get() = _videoList
+//
+//    fun getVideos() {
+//        viewModelScope.launch {
+//            _videoList.value = Resource.Loading
+//            try {
+//                val response = videorepository.getVideos()
+//                _videoList.value = response.value
+//            } catch (e: Exception) {
+//                _videoList.value = Resource.Error(e.localizedMessage?.toString() ?: "Unknown Error")
+//            }
+//        }
+//    }
+    fun getVideos() = videorepository.getVideos()
 }

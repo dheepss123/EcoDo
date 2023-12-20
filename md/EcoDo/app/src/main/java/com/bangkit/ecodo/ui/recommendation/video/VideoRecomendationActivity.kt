@@ -29,7 +29,7 @@ class VideoRecomendationActivity : AppCompatActivity() {
 
         setupRecyclerView()
 
-        viewModel.videoList.observe(this) { resource ->
+        viewModel.getVideos().observe(this) { resource ->
             when (resource) {
                 is Resource.Loading -> {
                     showLoading(true)

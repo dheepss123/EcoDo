@@ -101,20 +101,14 @@ Ecodo is a user-friendly application aimed at simplifying waste management, prom
 # Tech Stacks
 
 # How use this app?
+### Demo Application
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-<h3>Welcome to the Demo Application</h3>
-<!-- Ganti URL_di_sini dengan URL rekaman layar Anda -->
-<iframe width="160" height="320" src="github_asset/demo2.mp4" frameborder="0" allowfullscreen></iframe>
+Welcome to the Demo Application!
 
-</body>
-</html>
+Replace `URL_di_sini` with the actual URL of your screen recording.
+
+```html
+<iframe width="160" height="320" src="github_asset/demo2.gif" frameborder="0" allowfullscreen></iframe>
 
 # Try out our app!
 

@@ -41,6 +41,7 @@
     <string name="tentang">Tentang Kami</string>
     <string name="headline_trash">Sampah yang tersimpan</string>
     <string name="hint_search_trash">Cari history sampah anda</string>
+    <string name="action_delete">Hapus Sampah</string>
 
     <string name="recommendation_head">Yuk cari tau apa yang bisa kamu \nlakukan dengan jenis sampah (%1$s)</string>
 

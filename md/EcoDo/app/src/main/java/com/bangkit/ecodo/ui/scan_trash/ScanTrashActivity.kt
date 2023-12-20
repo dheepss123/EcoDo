@@ -7,6 +7,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
@@ -70,14 +71,16 @@ class ScanTrashActivity : AppCompatActivity() {
                 viewModel.uploadImage(imageFile).observe(this) { result ->
                     when (result) {
                         is Resource.Loading -> {
-                            // TODO : Mungkin bisa display loading
+                            showLoading(true)
                         }
 
                         is Resource.Error -> {
+                            showLoading(false)
                             showToast(result.error)
                         }
 
                         is Resource.Success -> {
+                            showLoading(false)
                             val intent = Intent(this, RecommendationActivity::class.java)
                             intent.putExtra(RecommendationActivity.TRASH_ID, result.data)
                             startActivity(intent)
@@ -123,5 +126,9 @@ class ScanTrashActivity : AppCompatActivity() {
             Log.d("Image URI", "showImage: $it")
             binding.imagePreview.setImageURI(it)
         }
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 }

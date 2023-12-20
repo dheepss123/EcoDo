@@ -102,16 +102,12 @@ Ecodo is a user-friendly application aimed at simplifying waste management, prom
 <img src="github_asset/tech stack.png" alt="cc" width="1080">
 
 # How use this app?
-### Demo Application
 
-Welcome to the Demo Application!
+### Demo with upload image:
 
-Replace `URL_di_sini` with the actual URL of your screen recording.
+![Demo Gif](https://github.com/dheepss123/EcoDo/raw/main/github_asset/demo2.gif)
 
-```html
-<iframe width="160" height="320" src="github_asset/demo2.gif" frameborder="0" allowfullscreen></iframe>
 
-# Try out our app!
 
 Feel free to explore each team member's GitHub profile for more information about their contributions and projects.
 

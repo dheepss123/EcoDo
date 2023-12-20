@@ -16,18 +16,8 @@ class VideoRepository(
     fun getVideos(): LiveData<Resource<List<VideoModel>>> = liveData {
         try {
             emit(Resource.Loading)
-//            val response = apiService.getVideos()
-            val response =
-                VideosResponse(
-                    Videos(
-                        listOf(
-                            Video("https://youtu.be/c9l_zzD2vPc?feature=shared"),
-                            Video("https://youtu.be/c9l_zzD2vPc?feature=shared"),
-                            Video("https://youtu.be/c9l_zzD2vPc?feature=shared"),
-                        )
-                    )
-                )
-//            emit(Resource.Success(response.item.data.map { it.toVideoModel() }))
+            val response = apiService.getVideos()
+            emit(Resource.Success(response.item.data.map { it.toVideoModel() }))
             emit(Resource.Success(response.item.data.map { it.toVideoModel() }))
         } catch (e: Exception) {
             emit(Resource.Error(e.localizedMessage?.toString() ?: "Unknown Error"))

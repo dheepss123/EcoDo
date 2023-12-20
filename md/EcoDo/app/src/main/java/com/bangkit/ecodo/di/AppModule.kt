@@ -3,6 +3,7 @@ package com.bangkit.ecodo.di
 import android.app.Application
 import androidx.room.Room
 import com.bangkit.ecodo.data.database.EcodoDatabase
+import com.bangkit.ecodo.data.repository.ArticleRepository
 import com.bangkit.ecodo.data.repository.TrashRepository
 import com.bangkit.ecodo.data.repository.VideoRepository
 import com.bangkit.ecodo.data.retrofit.ApiService
@@ -11,6 +12,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import java.util.concurrent.Executors
 import javax.inject.Singleton
 
 @Module
@@ -36,13 +38,19 @@ class AppModule {
     @Provides
     @Singleton
     fun provideTrashRepository(apiService: ApiService, database: EcodoDatabase): TrashRepository {
-        return TrashRepository(database.trashDao(), apiService)
+        return TrashRepository(database.trashDao(), apiService, Executors.newSingleThreadExecutor())
     }
 
     @Provides
     @Singleton
     fun provideVideoRepository(apiService: ApiService): VideoRepository {
         return VideoRepository(apiService)
+    }
+
+    @Provides
+    @Singleton
+    fun provideArticleRepository(apiService: ApiService): ArticleRepository {
+        return ArticleRepository()
     }
 
 }

@@ -34,13 +34,14 @@
     <string name="btn_cek_desc">Yuk Belajar menjadi keren</string>
     <string name="reduce_desc">deskripsi</string>
     <string name="head_reduce">Title</string>
-    <string name="buttonHome1">Menuju ke halaman rekomendasi</string>
+    <string name="buttonHome1">Lihat contoh hasil pemindaian</string>
     <string name="btn_feedback">Berikan umpan balik dan saran untuk  Aplikasi ini menjadi lebih baik</string>
     <string name="bantuan">Pusat Bantuan</string>
     <string name="pilihanbahasa">Pengaturan Bahasa</string>
     <string name="tentang">Tentang Kami</string>
     <string name="headline_trash">Sampah yang tersimpan</string>
     <string name="hint_search_trash">Cari history sampah anda</string>
+    <string name="action_delete">Hapus Sampah</string>
 
     <string name="recommendation_head">Yuk cari tau apa yang bisa kamu \nlakukan dengan jenis sampah (%1$s)</string>
 

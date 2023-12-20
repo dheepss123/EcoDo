@@ -3,19 +3,20 @@ package com.bangkit.ecodo.ui.recommendation.video
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import androidx.activity.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bangkit.ecodo.R
-import com.bangkit.ecodo.data.model.VideoModel
-import com.bangkit.ecodo.data.retrofit.response.getThumbnail
 import com.bangkit.ecodo.databinding.ActivityVideoRecomendationBinding
 import com.bangkit.ecodo.ui.adapter.AdapterItemTutorial
+import com.bangkit.ecodo.util.Resource
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class VideoRecomendationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityVideoRecomendationBinding
     private lateinit var adapter: AdapterItemTutorial
-
-    private var listCard = ArrayList<VideoModel>()
+    private val viewModel: VideoRecomendationViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +24,37 @@ class VideoRecomendationActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        adapter = AdapterItemTutorial(mutableListOf())
+        binding.rvList.adapter = adapter
+
+        setupRecyclerView()
+
+        viewModel.getVideos().observe(this) { resource ->
+            when (resource) {
+                is Resource.Loading -> {
+                    showLoading(true)
+                }
+
+                is Resource.Success -> {
+                    showLoading(false)
+                    val listVideo = resource.data
+                    adapter.updateList(listVideo)
+                }
+
+                is Resource.Error -> {
+                    showLoading(false)
+                    val errorMessage = resource.error
+                    Log.d("TAG", errorMessage)
+                }
+            }
+        }
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
+
+    private fun setupRecyclerView() {
         val layoutManager = LinearLayoutManager(
             this@VideoRecomendationActivity,
             LinearLayoutManager.VERTICAL,
@@ -32,26 +64,5 @@ class VideoRecomendationActivity : AppCompatActivity() {
         val itemDecoration =
             DividerItemDecoration(this@VideoRecomendationActivity, layoutManager.orientation)
         binding.rvList.addItemDecoration(itemDecoration)
-
-        listCard.addAll(listCards)
-        adapter = AdapterItemTutorial(listCard)
-        binding.rvList.adapter = adapter
-
     }
-
-    private val listCards: ArrayList<VideoModel>
-        get() {
-            val dataName = resources.getStringArray(R.array.data_head)
-            val dataPhoto = resources.obtainTypedArray(R.array.data_img)
-            val listCard = ArrayList<VideoModel>()
-            for (i in dataName.indices) {
-                val card = VideoModel(
-                    "https://play-lh.googleusercontent.com/j_u0NsRJc_PlGGY5APSV5jDCrO6OeBmKSa2Jpgx7qq4Zy0S2WyI8wRiB0PD0YpNpO7U7",
-                    dataName[i]
-                )
-                listCard.add(card)
-            }
-            dataPhoto.recycle()
-            return listCard
-        }
 }

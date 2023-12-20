@@ -103,6 +103,10 @@ Ecodo is a user-friendly application aimed at simplifying waste management, prom
 
 # How use this app?
 
+### Demo with camera:
+
+![Demo Gif](https://github.com/dheepss123/EcoDo/raw/main/github_asset/demo1.gif)
+
 ### Demo with upload image:
 
 ![Demo Gif](https://github.com/dheepss123/EcoDo/raw/main/github_asset/demo2.gif)
